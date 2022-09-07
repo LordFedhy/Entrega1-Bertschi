@@ -1,0 +1,16 @@
+{% extends "padre.html" %}
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Bienvenido a los clientes</h1>
+{% endblock %}
+
+{% block contenido %}
+<form action="{% url 'cliente1' %}" method="post"> {% csrf_token %}
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>Apellido: <input type="text" name="apellido"></p>
+    <p>Email: <input type="email" name="email"></p>
+    <p>Teléfono: <input type="int" name="telefono"></p>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}

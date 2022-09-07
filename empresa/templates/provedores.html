@@ -1,0 +1,16 @@
+{% extends "padre.html" %}
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Provedores</h1>
+{% endblock %}
+
+{% block contenido %}
+    <form action="{% url 'provedor1' %}" method="post"> {% csrf_token %}
+        <p>Provedor: <input type="text" name="nombre"></p>
+        <p>Telefono: <input type="int" name="telefono"></p>
+        <p>Email: <input type="email" name="email"></p>
+        <input type="submit" value="Enviar">
+    </form>
+
+{% endblock %}
